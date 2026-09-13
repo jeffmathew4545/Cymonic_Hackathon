@@ -6,12 +6,35 @@ from src.messaging import generate_outreach_message
 
 st.set_page_config(page_title="Sports Lot Optimiser", layout="wide")
 
-# Refresh dataset from disk button in sidebar
+# Hide Streamlit Deploy button and Menu header
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            header {visibility: hidden;}
+            .stDeployButton {display:none;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+# Data Controls in Sidebar
 st.sidebar.title("Data Controls")
 if st.sidebar.button("Reload CSV Data from Disk"):
     st.session_state.slots = load_slots()
     st.session_state.segments = load_segments()
-    st.sidebar.success("Reloaded dataset!")
+    st.sidebar.success("Reloaded dataset from CSV!")
+    st.rerun()
+
+if st.sidebar.button("Reset Dataset to Vacant State"):
+    raw_slots = load_slots()
+    for s in raw_slots:
+        s['current_status'] = 'vacant'
+        s['action_taken'] = ''
+        s['discount_pct_applied'] = 0
+        s['segment_notified'] = ''
+        s['reasoning'] = ''
+    save_slots(raw_slots)
+    st.session_state.slots = raw_slots
+    st.sidebar.success("Reset all slots to vacant!")
     st.rerun()
 
 # Load data into session state
@@ -27,26 +50,31 @@ st.title("SPORTS LOT OPTIMISER")
 st.subheader("AI-powered vacant slot intervention")
 st.markdown("---")
 
-# Dashboard
+# Dashboard Metrics
 total_slots = len(slots)
+vacant_count = sum(1 for s in slots if s.get('current_status') == 'vacant')
 action_taken_slots = sum(1 for s in slots if s.get('action_taken') in ['notify_only', 'notify_and_discount'])
 protected_slots = sum(1 for s in slots if s.get('action_taken') == 'no_action' or (s.get('action_taken') == 'notify_only' and 'margin' in str(s.get('reasoning', ''))))
 potential_discounts = sum(1 for s in slots if s.get('action_taken') == 'notify_and_discount')
 
 st.header("Dashboard")
 col1, col2, col3, col4 = st.columns(4)
-col1.metric("Total Slots in Pipeline", total_slots)
+col1.metric("Vacant Slots / Total", f"{vacant_count} / {total_slots}")
 col2.metric("Slots Requiring Action", action_taken_slots)
 col3.metric("Protected from Discount", protected_slots)
 col4.metric("Discounts Offered", potential_discounts)
 st.markdown("---")
 
-# SINGLE SLOT DEMO
+# SINGLE SLOT DEMO / INSPECTOR
 st.header("SELECT SLOT")
 if slots:
+    # Prefer showing vacant slots if available, otherwise show all slots
+    vacant_list = [s for s in slots if s.get('current_status') == 'vacant']
+    display_list = vacant_list if vacant_list else slots
+    
     slot_options = {
         f"{s['slot_id']} | {s['sport_type']} | {s['time_block']} | Status: {s.get('current_status', 'vacant')}": s 
-        for s in slots
+        for s in display_list
     }
     selected_label = st.selectbox("Choose a slot to analyze:", options=list(slot_options.keys()))
     selected_slot = slot_options[selected_label]
@@ -98,23 +126,21 @@ else:
 
 st.markdown("---")
 
-# RUN ALL
+# BATCH RUN ALL SLOTS
 st.header("RUN ALL SLOTS")
-col_btn1, col_btn2 = st.columns(2)
-with col_btn1:
-    if st.button("Process / Re-evaluate All Slots"):
-        updates = 0
-        for s in slots:
-            decision = decide(s)
-            apply_decision_to_slot(s, decision, segments)
-            updates += 1
-        save_slots(slots)
-        st.success(f"Processed and updated {updates} slots in CSV!")
-        st.rerun()
+if st.button("Process / Re-evaluate All Slots"):
+    updates = 0
+    for s in slots:
+        decision = decide(s)
+        apply_decision_to_slot(s, decision, segments)
+        updates += 1
+    save_slots(slots)
+    st.success(f"Processed and updated {updates} slots in CSV!")
+    st.rerun()
 
 st.markdown("---")
 
-# BEFORE / AFTER
+# LIVE CSV DATASET VIEW
 st.header("DATASET VIEW (CSV Records)")
 df = pd.DataFrame(slots)
 display_cols = ['slot_id', 'sport_type', 'date', 'time_block', 'historical_fill_rate', 'lead_time_hours', 'margin_pct', 'current_status', 'action_taken', 'discount_pct_applied', 'segment_notified', 'reasoning']
