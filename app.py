@@ -60,6 +60,17 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 st.title("SPORTS LOT OPTIMISER")
 st.markdown("---")
 
+# 2. Top Dashboard Metrics
+st.header("Dashboard")
+total_vacant = sum(1 for s in slots if s['current_status'] == 'vacant')
+action_taken = sum(1 for s in slots if s['current_status'] == 'handled')
+
+col1, col2 = st.columns(2)
+col1.metric("Total Vacant Slots", total_vacant)
+col2.metric("Slots Handled", action_taken)
+st.markdown("---")
+
+
 # 3. Per-Slot Inspector View
 st.header("Single Slot Inspector")
 vacant_slots = [s for s in slots if s['current_status'] == 'vacant']
