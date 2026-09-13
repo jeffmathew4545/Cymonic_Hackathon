@@ -1,0 +1,9 @@
+segment_id,segment_name,preferred_sport,preferred_time,price_sensitivity
+SEG001,College Cricket Group,Box Cricket,Afternoon,High
+SEG002,Corporate Football League,Football Turf,Evening,Low
+SEG003,Weekend Regulars,Box Cricket,Weekend,Medium
+SEG004,Student Badminton Club,Badminton,Afternoon,High
+SEG005,Corporate Badminton League,Badminton,Evening,Low
+SEG006,Family Weekend Players,Football Turf,Weekend,Medium
+SEG007,Freelancer Cricket Club,Box Cricket,Morning,High
+SEG008,Pro Badminton Trainers,Badminton,Morning,Low
