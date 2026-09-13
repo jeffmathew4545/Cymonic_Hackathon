@@ -1,37 +1,37 @@
 slot_id,sport_type,date,time_block,is_weekday,lead_time_hours,historical_fill_rate,base_price,margin_pct,current_status,action_taken,discount_pct_applied,segment_notified,reasoning
-S1015,Badminton,2026-10-22,7:00 PM – 8:00 PM,True,2.1,0.26,800,25,vacant,,,,
-S1022,Badminton,2026-10-08,5:00 PM – 6:00 PM,True,13.2,0.44,800,30,vacant,,,,
-S1033,Football,2026-10-22,2:00 PM – 3:00 PM,True,7.1,0.45,1000,18,vacant,,,,
-S1028,Cricket,2026-10-02,2:00 PM – 3:00 PM,True,9.4,0.53,900,15,vacant,,,,
-S1024,Cricket,2026-09-22,4:00 PM – 5:00 PM,True,13.4,0.61,1100,25,vacant,,,,
-S1036,Cricket,2026-10-06,2:00 PM – 3:00 PM,True,16.0,0.44,900,20,vacant,,,,
-S1010,Badminton,2026-10-12,5:00 PM – 6:00 PM,True,2.7,0.21,800,40,vacant,,,,
-S1016,Football,2026-09-29,3:00 PM – 4:00 PM,True,1.0,0.21,1000,20,vacant,,,,
-S1032,Badminton,2026-10-30,7:00 PM – 8:00 PM,True,10.3,0.57,800,55,vacant,,,,
-S1023,Cricket,2026-11-06,4:00 PM – 5:00 PM,True,15.4,0.54,1100,30,vacant,,,,
-S1025,Badminton,2026-10-08,3:00 PM – 4:00 PM,True,5.7,0.4,700,45,vacant,,,,
-S1018,Cricket,2026-10-22,2:00 PM – 3:00 PM,True,8.8,0.36,900,18,vacant,,,,
-S1008,Football,2026-10-19,2:00 PM – 3:00 PM,True,23.6,0.83,1000,50,vacant,,,,
-S1013,Cricket,2026-10-22,5:00 PM – 6:00 PM,True,2.2,0.25,1200,40,vacant,,,,
-S1003,Badminton,2026-10-12,3:00 PM – 4:00 PM,True,18.3,0.79,700,40,vacant,,,,
-S1012,Badminton,2026-10-05,3:00 PM – 4:00 PM,True,1.5,0.22,700,18,vacant,,,,
-S1019,Badminton,2026-10-14,3:00 PM – 4:00 PM,True,8.3,0.46,700,30,vacant,,,,
-S1017,Badminton,2026-11-06,8:00 AM – 9:00 AM,True,6.6,0.33,600,55,vacant,,,,
-S1009,Football,2026-10-21,4:00 PM – 5:00 PM,True,1.6,0.13,1100,40,vacant,,,,
-S1035,Badminton,2026-09-21,3:00 PM – 4:00 PM,True,8.6,0.6,700,20,vacant,,,,
-S1026,Football,2026-09-17,4:00 PM – 5:00 PM,True,11.5,0.49,1100,40,vacant,,,,
-S1004,Cricket,2026-10-08,2:00 PM – 3:00 PM,True,27.3,0.72,900,50,vacant,,,,
-S1014,Badminton,2026-10-07,6:00 PM – 7:00 PM,True,2.8,0.21,800,20,vacant,,,,
-S1002,Cricket,2026-09-14,5:00 PM – 6:00 PM,True,30.4,0.78,1200,55,vacant,,,,
-S1007,Badminton,2026-10-09,4:00 PM – 5:00 PM,True,31.7,0.79,700,35,vacant,,,,
-S1034,Badminton,2026-10-30,4:00 PM – 5:00 PM,True,8.8,0.35,700,18,vacant,,,,
-S1027,Badminton,2026-10-20,6:00 PM – 7:00 PM,True,14.4,0.51,800,25,vacant,,,,
-S1031,Badminton,2026-10-29,6:00 PM – 7:00 PM,True,13.9,0.4,800,15,vacant,,,,
-S1011,Football,2026-09-24,3:00 PM – 4:00 PM,True,2.3,0.24,1000,18,vacant,,,,
-S1030,Football,2026-11-02,8:00 PM – 9:00 PM,True,7.1,0.62,1300,15,vacant,,,,
-S1029,Badminton,2026-10-29,6:00 PM – 7:00 PM,True,3.4,0.46,800,55,vacant,,,,
-S1020,Football,2026-10-28,6:00 PM – 7:00 PM,True,5.3,0.58,1300,20,vacant,,,,
-S1021,Cricket,2026-10-28,7:00 PM – 8:00 PM,True,17.4,0.68,1200,15,vacant,,,,
-S1001,Cricket,2026-11-03,7:00 PM – 8:00 PM,True,18.5,0.75,1200,50,vacant,,,,
-S1005,Football,2026-09-23,5:00 PM – 6:00 PM,True,17.6,0.85,1200,35,vacant,,,,
-S1006,Football,2026-09-15,4:00 PM – 5:00 PM,True,21.7,0.71,1100,55,vacant,,,,
+S1015,Badminton,2026-10-22,7:00 PM – 8:00 PM,True,2.1,0.26,800.0,25.0,notified,notify_and_discount,15,Corporate Badminton League,Critical urgency! Fill rate is only 26% with 2.1h remaining (Risk: 0.83). Applied 15% discount (margin allows up to 15%).
+S1022,Badminton,2026-10-08,5:00 PM – 6:00 PM,True,13.2,0.44,800.0,30.0,notified,notify_and_discount,15,Corporate Badminton League,Moderate vacancy risk (0.63) with 13.2h lead time. Applied safe discount of 15% within margin cap of 30.0%.
+S1033,Football,2026-10-22,2:00 PM – 3:00 PM,True,7.1,0.45,1000.0,18.0,notified,notify_and_discount,8,Family Weekend Players,Moderate vacancy risk (0.67) with 7.1h lead time. Applied safe discount of 8% within margin cap of 18.0%.
+S1028,Cricket,2026-10-02,2:00 PM – 3:00 PM,True,9.4,0.53,900.0,15.0,notified,notify_and_discount,5,College Cricket Group,Moderate vacancy risk (0.6) with 9.4h lead time. Applied safe discount of 5% within margin cap of 15.0%.
+S1024,Cricket,2026-09-22,4:00 PM – 5:00 PM,True,13.4,0.61,1100.0,25.0,notified,notify_and_discount,15,College Cricket Group,Moderate vacancy risk (0.52) with 13.4h lead time. Applied safe discount of 15% within margin cap of 25.0%.
+S1036,Cricket,2026-10-06,2:00 PM – 3:00 PM,True,16.0,0.44,900.0,20.0,notified,notify_and_discount,10,College Cricket Group,Moderate vacancy risk (0.6) with 16.0h lead time. Applied safe discount of 10% within margin cap of 20.0%.
+S1010,Badminton,2026-10-12,5:00 PM – 6:00 PM,True,2.7,0.21,800.0,40.0,notified,notify_and_discount,25,Corporate Badminton League,Critical urgency! Fill rate is only 21% with 2.7h remaining (Risk: 0.85). Applied 25% discount (margin allows up to 30%).
+S1016,Football,2026-09-29,3:00 PM – 4:00 PM,True,1.0,0.21,1000.0,20.0,notified,notify_and_discount,10,Family Weekend Players,Critical urgency! Fill rate is only 21% with 1.0h remaining (Risk: 0.87). Applied 10% discount (margin allows up to 10%).
+S1032,Badminton,2026-10-30,7:00 PM – 8:00 PM,True,10.3,0.57,800.0,55.0,notified,notify_and_discount,15,Corporate Badminton League,Moderate vacancy risk (0.57) with 10.3h lead time. Applied safe discount of 15% within margin cap of 55.0%.
+S1023,Cricket,2026-11-06,4:00 PM – 5:00 PM,True,15.4,0.54,1100.0,30.0,notified,notify_and_discount,15,College Cricket Group,Moderate vacancy risk (0.55) with 15.4h lead time. Applied safe discount of 15% within margin cap of 30.0%.
+S1025,Badminton,2026-10-08,3:00 PM – 4:00 PM,True,5.7,0.4,700.0,45.0,notified,notify_and_discount,25,Student Badminton Club,Critical urgency! Fill rate is only 40% with 5.7h remaining (Risk: 0.71). Applied 25% discount (margin allows up to 35%).
+S1018,Cricket,2026-10-22,2:00 PM – 3:00 PM,True,8.8,0.36,900.0,18.0,notified,notify_and_discount,8,College Cricket Group,Critical urgency! Fill rate is only 36% with 8.8h remaining (Risk: 0.71). Applied 8% discount (margin allows up to 8%).
+S1008,Football,2026-10-19,2:00 PM – 3:00 PM,True,23.6,0.83,1000.0,50.0,monitored,no_action,0,,Healthy baseline demand (83% fill rate) and 23.6h lead time. Urgency is low (0.31). Leaving slot at standard base price.
+S1013,Cricket,2026-10-22,5:00 PM – 6:00 PM,True,2.2,0.25,1200.0,40.0,notified,notify_and_discount,25,Local Cricket Friends,Critical urgency! Fill rate is only 25% with 2.2h remaining (Risk: 0.83). Applied 25% discount (margin allows up to 30%).
+S1003,Badminton,2026-10-12,3:00 PM – 4:00 PM,True,18.3,0.79,700.0,40.0,monitored,no_action,0,,Healthy baseline demand (79% fill rate) and 18.3h lead time. Urgency is low (0.37). Leaving slot at standard base price.
+S1012,Badminton,2026-10-05,3:00 PM – 4:00 PM,True,1.5,0.22,700.0,18.0,notified,notify_and_discount,8,Student Badminton Club,Critical urgency! Fill rate is only 22% with 1.5h remaining (Risk: 0.86). Applied 8% discount (margin allows up to 8%).
+S1019,Badminton,2026-10-14,3:00 PM – 4:00 PM,True,8.3,0.46,700.0,30.0,notified,notify_and_discount,15,Student Badminton Club,Moderate vacancy risk (0.65) with 8.3h lead time. Applied safe discount of 15% within margin cap of 30.0%.
+S1017,Badminton,2026-11-06,8:00 AM – 9:00 AM,True,6.6,0.33,600.0,55.0,notified,notify_and_discount,25,Corporate Badminton League,Critical urgency! Fill rate is only 33% with 6.6h remaining (Risk: 0.75). Applied 25% discount (margin allows up to 45%).
+S1009,Football,2026-10-21,4:00 PM – 5:00 PM,True,1.6,0.13,1100.0,40.0,notified,notify_and_discount,25,Family Weekend Players,Critical urgency! Fill rate is only 13% with 1.6h remaining (Risk: 0.91). Applied 25% discount (margin allows up to 30%).
+S1035,Badminton,2026-09-21,3:00 PM – 4:00 PM,True,8.6,0.6,700.0,20.0,notified,notify_and_discount,10,Student Badminton Club,Moderate vacancy risk (0.57) with 8.6h lead time. Applied safe discount of 10% within margin cap of 20.0%.
+S1026,Football,2026-09-17,4:00 PM – 5:00 PM,True,11.5,0.49,1100.0,40.0,notified,notify_and_discount,15,Family Weekend Players,Moderate vacancy risk (0.61) with 11.5h lead time. Applied safe discount of 15% within margin cap of 40.0%.
+S1004,Cricket,2026-10-08,2:00 PM – 3:00 PM,True,27.3,0.72,900.0,50.0,monitored,no_action,0,,Healthy baseline demand (72% fill rate) and 27.3h lead time. Urgency is low (0.34). Leaving slot at standard base price.
+S1014,Badminton,2026-10-07,6:00 PM – 7:00 PM,True,2.8,0.21,800.0,20.0,notified,notify_and_discount,10,Corporate Badminton League,Critical urgency! Fill rate is only 21% with 2.8h remaining (Risk: 0.85). Applied 10% discount (margin allows up to 10%).
+S1002,Cricket,2026-09-14,5:00 PM – 6:00 PM,True,30.4,0.78,1200.0,55.0,monitored,no_action,0,,Healthy baseline demand (78% fill rate) and 30.4h lead time. Urgency is low (0.28). Leaving slot at standard base price.
+S1007,Badminton,2026-10-09,4:00 PM – 5:00 PM,True,31.7,0.79,700.0,35.0,monitored,no_action,0,,Healthy baseline demand (79% fill rate) and 31.7h lead time. Urgency is low (0.26). Leaving slot at standard base price.
+S1034,Badminton,2026-10-30,4:00 PM – 5:00 PM,True,8.8,0.35,700.0,18.0,notified,notify_and_discount,8,Student Badminton Club,Critical urgency! Fill rate is only 35% with 8.8h remaining (Risk: 0.72). Applied 8% discount (margin allows up to 8%).
+S1027,Badminton,2026-10-20,6:00 PM – 7:00 PM,True,14.4,0.51,800.0,25.0,notified,notify_and_discount,15,Corporate Badminton League,Moderate vacancy risk (0.57) with 14.4h lead time. Applied safe discount of 15% within margin cap of 25.0%.
+S1031,Badminton,2026-10-29,6:00 PM – 7:00 PM,True,13.9,0.4,800.0,15.0,notified,notify_and_discount,5,Corporate Badminton League,Moderate vacancy risk (0.64) with 13.9h lead time. Applied safe discount of 5% within margin cap of 15.0%.
+S1011,Football,2026-09-24,3:00 PM – 4:00 PM,True,2.3,0.24,1000.0,18.0,notified,notify_and_discount,8,Family Weekend Players,Critical urgency! Fill rate is only 24% with 2.3h remaining (Risk: 0.84). Applied 8% discount (margin allows up to 8%).
+S1030,Football,2026-11-02,8:00 PM – 9:00 PM,True,7.1,0.62,1300.0,15.0,notified,notify_and_discount,5,Weekend Regulars,Moderate vacancy risk (0.57) with 7.1h lead time. Applied safe discount of 5% within margin cap of 15.0%.
+S1029,Badminton,2026-10-29,6:00 PM – 7:00 PM,True,3.4,0.46,800.0,55.0,notified,notify_and_discount,25,Corporate Badminton League,Critical urgency! Fill rate is only 46% with 3.4h remaining (Risk: 0.7). Applied 25% discount (margin allows up to 45%).
+S1020,Football,2026-10-28,6:00 PM – 7:00 PM,True,5.3,0.58,1300.0,20.0,notified,notify_and_discount,10,Weekend Regulars,Moderate vacancy risk (0.61) with 5.3h lead time. Applied safe discount of 10% within margin cap of 20.0%.
+S1021,Cricket,2026-10-28,7:00 PM – 8:00 PM,True,17.4,0.68,1200.0,15.0,notified,notify_and_discount,5,Local Cricket Friends,Moderate vacancy risk (0.45) with 17.4h lead time. Applied safe discount of 5% within margin cap of 15.0%.
+S1001,Cricket,2026-11-03,7:00 PM – 8:00 PM,True,18.5,0.75,1200.0,50.0,notified,notify_and_discount,15,Local Cricket Friends,Moderate vacancy risk (0.4) with 18.5h lead time. Applied safe discount of 15% within margin cap of 50.0%.
+S1005,Football,2026-09-23,5:00 PM – 6:00 PM,True,17.6,0.85,1200.0,35.0,monitored,no_action,0,,Healthy baseline demand (85% fill rate) and 17.6h lead time. Urgency is low (0.34). Leaving slot at standard base price.
+S1006,Football,2026-09-15,4:00 PM – 5:00 PM,True,21.7,0.71,1100.0,55.0,monitored,no_action,0,,Healthy baseline demand (71% fill rate) and 21.7h lead time. Urgency is low (0.39). Leaving slot at standard base price.
