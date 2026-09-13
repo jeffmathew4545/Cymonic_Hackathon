@@ -1,0 +1,8 @@
+segment_id,segment_name,preferred_sport,preferred_time,price_sensitivity
+SEG01,College Cricket Group,Cricket,Afternoons,High
+SEG02,Corporate Badminton League,Badminton,Evenings,Low
+SEG03,Weekend Regulars,Football,Evenings,Medium
+SEG04,Corporate Football League,Football,Evenings,Low
+SEG05,Student Badminton Club,Badminton,Afternoons,High
+SEG06,Family Weekend Players,Football,Afternoons,Medium
+SEG07,Local Cricket Friends,Cricket,Evenings,Medium
